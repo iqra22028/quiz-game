@@ -1,0 +1,258 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('bgpic.jpg') no-repeat center center fixed;
+
+    background-size: cover;
+    animation: background-animation 10s ease-in-out infinite;
+}
+
+@keyframes background-animation {
+    0% {
+        filter: brightness(1.2);
+    }
+    50% {
+        filter: brightness(0.9);
+    }
+    100% {
+        filter: brightness(1.2);
+    }
+}
+
+/* Hidden class for hiding elements */
+.hidden {
+    display: none;
+}
+
+/* Styling the game container with animations */
+.game-container {
+    text-align: center;
+    background-color: rgba(40, 116, 166, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeInContainer 1s ease-out, slideUp 1.5s ease-out, colorChange 5s linear infinite, shine 3s ease-out infinite, pulse 2s ease-in-out infinite;
+}
+
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Color changing animation */
+@keyframes colorChange {
+    0% {
+        background-color: rgba(40, 116, 166, 0.8);
+    }
+    50% {
+        background-color: rgba(98, 197, 98, 0.8);
+    }
+    100% {
+        background-color: rgba(40, 116, 166, 0.8);
+    }
+}
+
+/* Shining star animation */
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.8), 0 0 70px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Styling for the intro screen */
+#intro-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideFromLeft 1s ease-out;
+}
+
+#intro-screen p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#intro-screen button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+#intro-screen button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Slide from the left animation */
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Quiz box styling */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#question-container p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #f1fafa;
+    animation: fadeInUp 1s ease-out;
+}
+
+#answer-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    animation: slideInUp 1.5s ease-out;
+}
+
+/* Slide-in-up animation for answers */
+@keyframes slideInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.answer {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.answer:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in effect for answers */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.answer-text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#score-container {
+    margin-top: 30px;
+}
+
+#score-container p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#score-container button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#score-container button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Styles for the wrong and correct answers */
+.wrong-answer {
+    background-color: #e74c3c !important;
+}
+
+.correct-answer {
+    background-color: #2ecc71 !important;
+}

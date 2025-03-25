@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Instructions Modal -->
+    <div id="intro-screen">
+      <h1>Welcome to the Quiz Game!</h1>
+      <p>This quiz contains 15 questions.</p>
+      <p>Choose the correct answer from the options.</p>
+      <p>You have 30 seconds for each question.</p>
+      <p>Are you ready?</p>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Box -->
+    <div id="quiz-box" class="hidden">
+      <h1>Quiz Game</h1>
+      <div id="question-container">
+        <p id="question"></p>
+        <div id="answer-options">
+          <div class="answer" onclick="checkAnswer(0)">
+            <p class="answer-text">Option 1</p>
+          </div>
+          <div class="answer" onclick="checkAnswer(1)">
+            <p class="answer-text">Option 2</p>
+          </div>
+          <div class="answer" onclick="checkAnswer(2)">
+            <p class="answer-text">Option 3</p>
+          </div>
+          <div class="answer" onclick="checkAnswer(3)">
+            <p class="answer-text">Option 4</p>
+          </div>
+        </div>
+      </div>
+      <div id="score-container">
+        <p>Score: <span id="score">0</span></p>
+        <p>Time Left: <span id="time-left">20</span>s</p>
+        <button onclick="nextQuestion()">Next Question</button>
+      </div>
+    </div>
+
+    <!-- End Screen -->
+    <div id="end-screen" class="hidden">
+      <h1>Quiz Over!</h1>
+      <p>You attended <span id="total-questions"></span> questions.</p>
+      <p>Your score is: <span id="final-score"></span> out of 15.</p>
+      <p>Your percentage: <span id="percentage"></span>%</p>
+      <p>Your grade: <span id="grade"></span> <span id="emoji"></span></p>
+      <button onclick="resetGame()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
