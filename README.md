@@ -1,4 +1,4 @@
-🧠 Quiz Game 🎯
+# 🧠 Quiz Game 🎯
 Welcome to the Quiz Game! This fun and interactive game challenges your knowledge with multiple-choice questions while racing against a timer ⏳. Can you answer all questions correctly before time runs out? Play now and test your skills!
 
 ✨ Features
